@@ -1,0 +1,16 @@
+  380  sudo gem install -y capistrano
+  392  ssh-keygen -t rsa
+  400  ssh-keygen -t rsa1
+  401  ssh-keygen -t dsa
+  405  capify .
+  407  less Capfile 
+  413  emacs config/deploy.rb 
+  417  cap deploy:setup
+  420  cap -T
+  421  cap -q deploy:check
+  422  cap deploy:cold
+  423  cap deploy:setup
+  426  svn add Capfile config/deploy.rb
+  427  svn commit -m "Added capistrano deployment files"
+  431  cap deploy
+  438  sudo gem install fastthread --no-ri --no-rdoc

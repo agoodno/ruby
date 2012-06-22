@@ -1,0 +1,9 @@
+<% if cart_item == @current_item %>
+ <tr id="current_item">
+<% else %>
+ <tr>
+<% end %>
+  <td id="<%= cart_item.product %>"><%= link_to_remote cart_item.quantity, :url => { :action => :remove_from_cart, :id => cart_item.product }, :method => :post %>&times;<%= number_to_currency(cart_item.unit_price) %></td>
+  <td><%= h(cart_item.title) %></td>
+  <td class="item-price"><%= number_to_currency(cart_item.price) %></td>
+ </tr>

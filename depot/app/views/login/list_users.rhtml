@@ -1,0 +1,22 @@
+<div>
+  <h1>User Listing</h1>
+
+  <table cellpadding="5" cellspacing="0">
+  <% for user in @all_users %>
+    <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+      <td><%= user.name %></td>
+      <td class="list-actions">
+        <%= link_to 'Show', :action => 'show', :id => user %><br/>
+        <%= link_to 'Edit', :action => 'edit', :id => user %><br/>
+        <%= link_to 'Destroy', { :action  => 'destroy', :id => user },
+                                 :confirm => "Are you sure?",
+                                 :method  => :post %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+
+<%= link_to 'New user', :action => 'add_user' %>
